@@ -1,0 +1,51 @@
+*{
+    color:white;
+}
+body{
+    margin: 0;
+    padding: 0%;
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 1rem;
+    background-color: rgb(152, 56, 152);
+}
+
+.navbarListado li{
+    margin-inline: 5px;
+}
+a{
+    text-decoration: none;
+}
+ul.navbarListado{
+    display: flex;
+    list-style: none;
+    display: flex; 
+    padding: 0;
+}
+.navbarServicios{
+    position: absolute;
+    margin: 0;
+    padding: 0%;
+}
+.navbarServicios li{
+    list-style: none;
+}
+
+.carrito{
+    width: 20%;
+    height: 10%;
+}
+
+.navbarLogo img{
+    width: 150px;
+    height: 150px;
+    margin: 0%;
+}
+.items{
+    color: black;
+}
