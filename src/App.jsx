@@ -2,8 +2,8 @@
 import "../src/App.css"
 import Navbar from './components/Navbar'
 import Banner from './components/banner'
-import Item from './components/Item'
-import ItemList from './components/ItemList'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 function App() {
   
@@ -11,8 +11,7 @@ function App() {
     <>
       <Navbar />
       <Banner />
-      <ItemList />
-      <Item/>
+      <ItemDetailContainer />
     </>
     
   )
