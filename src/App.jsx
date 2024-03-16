@@ -2,6 +2,7 @@
 import './App.css'
 import Navbar from '../components/Navbar'
 import Banner from '../components/banner'
+import itemList from '../components/itemList'
 import ItemListContainer from '../components/ItemListContainer'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
     <Navbar/>
     <Banner/>
+    <itemList/>
     <ItemListContainer/>
     </>
   )

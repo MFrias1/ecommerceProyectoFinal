@@ -2,7 +2,7 @@ import { useState,useEffect } from "react"
 import "../src/App.css"
 import Item from "./Item"
 
-const ItemListContainer = ()=>{
+const itemList= ()=>{
     
     //estados
     const [MostrarProductos,SetMostrarProductos] = useState([]);
@@ -35,4 +35,4 @@ const ItemListContainer = ()=>{
         </section>
     )
 }
-export default ItemListContainer;
+export default itemList;
