@@ -1,5 +1,7 @@
-import carrito from '../src/assets/carrito.png'
+import carrito from '../assets/carrito.png'
+import "../App.css"
 import { useState } from 'react'
+
 const CartWidget=()=>{
 
     const [contador, setContador] = useState(0);

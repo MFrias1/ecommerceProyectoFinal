@@ -1,8 +1,9 @@
 
-import './App.css'
-import Navbar from '../components/Navbar'
-import Banner from '../components/banner'
-import ItemList from '../components/ItemList'
+import "../src/App.css"
+import Navbar from './components/Navbar'
+import Banner from './components/banner'
+import Item from './components/Item'
+import ItemList from './components/ItemList'
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Banner />
       <ItemList />
+      <Item/>
     </>
     
   )
