@@ -1,14 +1,16 @@
-import { useState } from 'react'
+
 import './App.css'
 import Navbar from '../components/Navbar'
-import ItemListConteiner from '../components/ItemListConteiner'
+import Banner from '../components/banner'
+import ItemListContainer from '../components/ItemListContainer'
 
 function App() {
   
   return (
     <>
     <Navbar/>
-    <ItemListConteiner items="hola"/>
+    <Banner/>
+    <ItemListContainer/>
     </>
   )
 }

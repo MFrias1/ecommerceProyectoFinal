@@ -1,0 +1,58 @@
+[
+    {
+        "id":1,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada simple",
+        "descripcion":"tirada de 3 cartas",
+        "precio":"$2000"
+    },
+    {
+        "id":2,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada completa",
+        "descripcion":"tirada de 5 cartas",
+        "precio":"$5000"
+    },
+    {
+        "id":3,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada enamorados",
+        "descripcion":"tirada de cartas",
+        "precio":"$10000"
+    },
+    {
+        "id":4,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada completa",
+        "descripcion":"tirada de 5 cartas",
+        "precio":"$5000"
+    },
+    {
+        "id":5,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada enamorados",
+        "descripcion":"tirada de cartas",
+        "precio":"$10000"
+    },
+    {
+        "id":6,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada completa",
+        "descripcion":"tirada de 5 cartas",
+        "precio":"$5000"
+    },
+    {
+        "id":7,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada enamorados",
+        "descripcion":"tirada de cartas",
+        "precio":"$10000"
+    },
+    {
+        "id":8,
+        "imagen":"/src/assets/logo.png",
+        "nombre":"tirada enamorados",
+        "descripcion":"tirada de cartas",
+        "precio":"$10000"
+    }
+]
