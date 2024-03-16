@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import "../src/App.css"
-import Item from "./Item"
+import Item from "../components/Item"
 
 const itemList= ()=>{
     
@@ -19,20 +19,23 @@ const itemList= ()=>{
    
    //mapeo
     return(
-         <section class ="servicios">
-            <div className="tituloServicios">
-                <h2> Nuestros Servicios </h2>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore corrupti cumque nihil incidunt illo enim autem labore magni ex.</h3>
-            </div>
-            <ul>
-                {MostrarProductos.map((item, index) =>{
+        <>        
+            <section class ="servicios">
+                <div className="tituloServicios">
+                    <h2> Nuestros Servicios </h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore corrupti cumque nihil incidunt illo enim autem labore magni ex.</h3>
+                </div>
+                <ul>
+                    {MostrarProductos.map((item, index) =>{
+                        
+                        return <Item key={index} item={item} />
                     
-                    return <Item key={index} item={item} />
-                   
-                })}
-            </ul>
-            
-        </section>
+                    })}
+                </ul>
+                
+            </section>
+        </>
+
     )
 }
 export default itemList;
