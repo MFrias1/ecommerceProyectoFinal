@@ -2,7 +2,7 @@
 import './App.css'
 import Navbar from '../components/Navbar'
 import Banner from '../components/banner'
-import itemList from '../components/itemList'
+import ItemList from '../components/ItemList'
 
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       <Banner />
-      <itemList />
+      <ItemList />
     </>
     
   )

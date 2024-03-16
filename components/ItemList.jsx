@@ -20,7 +20,7 @@ const itemList= ()=>{
    //mapeo
     return(
         <>        
-            <section class ="servicios">
+            <section className ="servicios">
                 <div className="tituloServicios">
                     <h2> Nuestros Servicios </h2>
                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore corrupti cumque nihil incidunt illo enim autem labore magni ex.</h3>
@@ -29,7 +29,7 @@ const itemList= ()=>{
                     {MostrarProductos.map((item, index) =>{
                         
                         return <Item key={index} item={item} />
-                    
+                       
                     })}
                 </ul>
                 
