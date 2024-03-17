@@ -14,7 +14,7 @@ body{
     background-color: violet;
 }
 
-.navbarListado li{
+.navbarDe li{
     margin-inline: 5px;
 }
 a{
@@ -91,12 +91,23 @@ ul.navbarListado{
 }
 .servicios ul li{
     width: 302px;
-    height: 317px;
+    height: 407px;
     margin-inline: 1px;
-    margin-top: 20px;
-    background-color: violet;
+    margin-top: 50px;
+    background-color: rgb(93, 29, 93);
+}
+.serviciosTitulo{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin:auto;
+    height: 20%;
+    width: 80%;
+}
+.serviciosTitulo p{
+    font-size: 20px;
 }
 .listadoDeServicios img{
     width: 95%;
-    height: 75%;
+    height: 65%;
 }
