@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const ItemCount = ({ stock, initial, onAdd })=>{
-/*
+  //estado contador
     const [contador, setContador] = useState(initial)
 
     const handleCountChange = (value) => {
@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, onAdd })=>{
           Agregar al carrito
         </button>
     </div>);
-    */
+    
 
 }
 export default ItemCount;

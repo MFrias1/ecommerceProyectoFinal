@@ -1,7 +1,7 @@
-export const AsyncMock = (servicios)=>{
+export const AsyncMock = (mock)=>{
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve(servicios)
+            resolve(mock)
         }, 2000)
     })
 }

@@ -7,26 +7,23 @@ import { AsyncMock } from "../utils/asyncMock";
 const ItemDetailContainer= ()=>{
     
     //estados
-    const [servicesCharged,setServicesCharged]= useState({})
     const [cargando,setCargando] = useState(true)
-    const [MostrarProductos,SetMostrarProductos] = useState([]);
-    
-    //llamado a
-    useEffect(()=>{
-        SetMostrarProductos(servicios);
-    },[])
+    const [MostrarServicios,SetMostrarProductos] = useState([]);
 
     //cargo los productos del JSON
     useEffect(()=>{
         setCargando(true);
         AsyncMock(servicios).then(respuesta=> {
-            setServicesCharged(respuesta);
+            SetMostrarProductos(respuesta);
             setCargando(false);
         });
     }, [])
    
-    if (cargando) return <h1>Cargando itemdetail...</h1>
-
+    if (cargando) return (
+    <>
+        <h1>Cargando itemdetail...</h1>
+    </>
+    )
 
    //mapeo
     return(
@@ -37,11 +34,15 @@ const ItemDetailContainer= ()=>{
                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore corrupti cumque nihil incidunt illo enim autem labore magni ex.</h3>
                 </div>
                 <ul>
-                    {MostrarProductos.length>0 && MostrarProductos.map((item, index) =>{
-                        
-                        return <ItemDetail item={item} />
-                       
-                    })}
+                    {
+                        MostrarServicios.length>0 && MostrarServicios.map((item, index) =>{
+                            return (
+                            <>
+                                <ItemDetail item={item}/>
+                            </>
+                            )
+                        })
+                    }
                 </ul>
                 
             </section>

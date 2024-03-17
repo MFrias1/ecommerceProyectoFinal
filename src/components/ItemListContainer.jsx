@@ -24,7 +24,6 @@ const ItemListContainer = ()=>{
     }
 
     const ProductosPorCategoria= ObtenerServiciosPorCategoria(id)
-    
 
     return(
         <>
@@ -33,24 +32,26 @@ const ItemListContainer = ()=>{
         </div>
         <div>
             {response.categorias.map((categoria)=>{
-                return <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
-                    <h2>{categoria.nombre}</h2>
-                </Link>
-            }) }
+                return (
+                    <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
+                        <h2>{categoria.nombre}</h2>
+                    </Link>
+                )
+            })}
         </div>
         {  
             ProductosPorCategoria && (
                 ProductosPorCategoria.map((servicio)=>{
+                    console.log(servicio)
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
-                        <div>{servicio.nombre}</div>
+                            <div>{servicio.nombre}</div>
                         </Link>
                     )
                     
                 })
             )
         }
-        </>
-    )
+    </>);
 }
 export default ItemListContainer;
