@@ -1,3 +1,5 @@
+//categorias de los servicios 
+
 import { useState,useEffect } from "react";
 import {Link, useParams} from "react-router-dom";
 import categorias from "../utils/productos.json";
@@ -45,7 +47,7 @@ const ItemListContainer = ()=>{
                     console.log(servicio)
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
-                            <div>{servicio.nombre}</div>
+                            <h1>{servicio.nombre}</h1>
                         </Link>
                     )
                     

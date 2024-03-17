@@ -6,7 +6,7 @@ const ItemCount = ({ stock, initial, onAdd })=>{
 
     const handleCountChange = (value) => {
         const newCount = contador + value;
-        if (newCount >= 1 && newCount <= stock) {
+        if (newCount >= 0 && newCount <= stock) {
             setContador(newCount)
         }
     }
