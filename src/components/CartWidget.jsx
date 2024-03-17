@@ -3,7 +3,7 @@ import "../App.css"
 import { useState } from 'react'
 
 const CartWidget=()=>{
-
+    /*
     const [contador, setContador] = useState(0);
 
     const incrementarContador = () => {
@@ -19,6 +19,6 @@ const CartWidget=()=>{
             <button onClick={incrementarContador}> Hace click </button> 
             <div>{contador}</div>
         </>
-    );
+    );*/
 }
 export default CartWidget;

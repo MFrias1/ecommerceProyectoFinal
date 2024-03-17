@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import "../App.css"
-import productos from "../utils/productos.json"
+import servicios from "../utils/productos.json"
 import ItemDetail from "./ItemDetail";
 import { AsyncMock } from "../utils/asyncMock";
 
@@ -10,15 +10,24 @@ const ItemDetailContainer= ()=>{
     const [servicesCharged,setServicesCharged]= useState({})
     const [cargando,setCargando] = useState(true)
     const [MostrarProductos,SetMostrarProductos] = useState([]);
+    
     //llamado a
     useEffect(()=>{
-        SetMostrarProductos(productos);
+        SetMostrarProductos(servicios);
     },[])
 
+    //cargo los productos del JSON
     useEffect(()=>{
-        AsyncMock(servicios).then(respuesta=> setServicesCharged(respuesta))
+        setCargando(true);
+        AsyncMock(servicios).then(respuesta=> {
+            setServicesCharged(respuesta);
+            setCargando(false);
+        });
     }, [])
    
+    if (cargando) return <h1>Cargando itemdetail...</h1>
+
+
    //mapeo
     return(
         <>        
