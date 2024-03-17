@@ -1,58 +1,80 @@
-[
+{
+    "categorias":[
+    {"id":1, "nombre":"Pareja"},
+    {"id":2, "nombre":"General"}
+    ],
+
+    "servicios":[
     {
         "id":1,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada simple",
+        "nombre":"Lectura de Cruz Celta",
         "descripcion":"tirada de 3 cartas",
-        "precio":"$2000"
+        "precio":"$5000",
+        "categoria":2,
+        "stock":50
     },
     {
         "id":2,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada completa",
+        "nombre":"Lectura del Sol",
         "descripcion":"tirada de 5 cartas",
-        "precio":"$5000"
+        "precio":"$5000",
+        "categoria":2,
+        "stock":50
     },
     {
         "id":3,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada enamorados",
+        "nombre":"Lectura de las Relaciones",
         "descripcion":"tirada de cartas",
-        "precio":"$10000"
+        "precio":"$7500",
+        "categoria":1,
+        "stock":50
     },
     {
         "id":4,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada completa",
+        "nombre":"Lectura de la Balanza",
         "descripcion":"tirada de 5 cartas",
-        "precio":"$5000"
+        "precio":"$9000",
+        "categoria":2,
+        "stock":50
     },
     {
         "id":5,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada enamorados",
+        "nombre":"Lectura del Caballo de Troya",
         "descripcion":"tirada de cartas",
-        "precio":"$10000"
+        "precio":"$60000",
+        "categoria":2,
+        "stock":50
     },
     {
         "id":6,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada completa",
+        "nombre":"Lectura Evolutiva",
         "descripcion":"tirada de 5 cartas",
-        "precio":"$5000"
+        "precio":"$4000",
+        "categoria":2,
+        "stock":50
     },
     {
         "id":7,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada enamorados",
+        "nombre":"Lectura de la Pareja",
         "descripcion":"tirada de cartas",
-        "precio":"$10000"
+        "precio":"$7000",
+        "categoria":1,
+        "stock":50
     },
     {
         "id":8,
         "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
-        "nombre":"tirada enamorados",
+        "nombre":"Lectura del Crush",
         "descripcion":"tirada de cartas",
-        "precio":"$10000"
+        "precio":"$10000",
+        "categoria":1,
+        "stock":50
     }
-]
+]}

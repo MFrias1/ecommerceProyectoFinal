@@ -1,10 +1,18 @@
 import { useState,useEffect } from "react"
-import "../App.css"
+import {useParams} from "react-router-dom";
 
 const ItemListContainer = ()=>{
+    const {id} = useParams();
+    const [response, setResponse]=useStateseState([])
+    const [Cargando, setCargando]=useState(true)
     
+    useEffect(()=>{
+         
+    })
     return(
-        <div></div>
+        <>
+        
+        </>
     )
 }
 export default ItemListContainer;
