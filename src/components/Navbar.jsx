@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CartWidget from "./CartWidget";
+
 const Navbar =()=>{
     const [MostrarServicios,SetMostrarServicios] = useState(false);
  return (
@@ -14,8 +15,8 @@ const Navbar =()=>{
                     <li> <a href="#" onClick={()=>SetMostrarServicios(!MostrarServicios)}>Servicios</a>
                         {MostrarServicios && (
                             <ul className="navbarServicios">
-                                <li>Tarot</li>
-                                <li>Lenormand</li>
+                                <li>General</li>
+                                <li>De Pareja</li>
                             </ul>
                         )}
                     </li>

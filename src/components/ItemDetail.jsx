@@ -11,8 +11,13 @@ const ItemDetail =({item, index})=>{
     return(
         <>
             <li key={index} className="listadoDeServicios"> 
-                   <div> <img src={item.imagen} alt={item.nombre}></img> </div>
-                   <div className="serviciosTitulo"> <p> {item.nombre} </p></div>
+                    <div> 
+                        <img src={item.imagen} alt={item.nombre}></img> 
+                    </div>
+                    <div className="serviciosTitulo"> 
+                        <p>{item.nombre}</p>
+                        <p>{item.precio}</p>
+                    </div>
                    <ItemCount stock={item.stock} initial={0} onAdd={handleAdd}/>
             </li>
         </>

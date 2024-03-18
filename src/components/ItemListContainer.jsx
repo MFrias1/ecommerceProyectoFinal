@@ -3,6 +3,7 @@
 import { useState,useEffect } from "react";
 import {Link, useParams} from "react-router-dom";
 import categorias from "../utils/productos.json";
+import Navbar from "./Navbar";
 import { AsyncMock } from "../utils/asyncMock";
 
 const ItemListContainer = ()=>{
@@ -29,25 +30,25 @@ const ItemListContainer = ()=>{
 
     return(
         <>
-        <div>
-            <h1>Categorias</h1>
-        </div>
-        <div>
+            <div className="categoriasTitulo">
+                <h1>Tipos de Servicios</h1>
+            </div>
             {response.categorias.map((categoria)=>{
-                return (
+                 return (
                     <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
-                        <h2>{categoria.nombre}</h2>
+                            <p>{categoria.nombre}</p>
                     </Link>
                 )
             })}
-        </div>
         {  
             ProductosPorCategoria && (
                 ProductosPorCategoria.map((servicio)=>{
                     console.log(servicio)
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
-                            <h1>{servicio.nombre}</h1>
+                            <div className="categoriasDespliegue_Nombre">
+                                <h1>{servicio.nombre}</h1>
+                            </div>
                         </Link>
                     )
                     

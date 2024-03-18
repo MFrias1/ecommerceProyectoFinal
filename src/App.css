@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0%;
     color: white;
-    background-color: violet;
+    background-color: #e2d7d5;
     
 }
 .navbar{
@@ -11,7 +11,7 @@ body{
     justify-content: space-around;
     align-items: center;
     padding-inline: 1rem;
-    background-color: violet;
+    background-color: #edb6b4;
 }
 
 .navbarDe li{
@@ -57,7 +57,6 @@ ul.navbarListado{
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
 }
 .bannerPrincipal div{
     width: calc(100%/3);
@@ -92,22 +91,53 @@ ul.navbarListado{
 .servicios ul li{
     width: 302px;
     height: 407px;
-    margin-inline: 1px;
-    margin-top: 50px;
-    background-color: rgb(93, 29, 93);
+    margin-inline: 2px;
+    margin-top: 3px;
+    border: solid rgb(245, 180, 245) 1px;
+    background-color: rgb(255, 225, 255);
 }
 .serviciosTitulo{
     align-items: center;
-    text-align: center;
     justify-content: center;
     margin:auto;
-    height: 20%;
-    width: 80%;
+    height: 15%;
+    width: 95%;
+    font-size: 15px;
+    background-color: none;
 }
 .serviciosTitulo p{
-    font-size: 20px;
+    text-align: left;
+    margin: 0%;
 }
 .listadoDeServicios img{
-    width: 95%;
+    width: 100%;
     height: 65%;
 }
+/*.categorias{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 470px;
+    color: #edb6b4;
+}
+.categoriasTitulo{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.categoriasDespliegue{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.categoriasDespliegue_Nombre{
+    align-items: center;
+    justify-content: center;
+    margin-inline: 5px;
+    height: 200px;
+    width: 100px;
+    background-color:#edb6b4;
+    border: solid 2px #c99694;
+}*/

@@ -1,6 +1,5 @@
 import "../src/App.css"
 import Navbar from './components/Navbar'
-import Banner from './components/banner'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
@@ -11,7 +10,6 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <Banner />
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/categorias/:id' element={<ItemListContainer/>} />

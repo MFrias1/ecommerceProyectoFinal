@@ -1,12 +1,16 @@
 {
     "categorias":[
-    {"id":1, "nombre":"Pareja"},
-    {"id":2, "nombre":"General"}
+    {"id":1, 
+    "nombre":"Pareja",
+    "imagen":"https://img.freepik.com/vector-gratis/ilustracion-cartas-tarot-dibujadas-mano_52683-108989.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087"},
+    {"id":2, 
+    "nombre":"General",
+    "imagen":"https://img.freepik.com/vector-gratis/ilustracion-cartas-tarot-dibujadas-mano_52683-108989.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087"}
     ],
     "servicios":[
     {
         "id":1,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-108980.jpg?w=740",
         "nombre":"Lectura de Cruz Celta",
         "descripcion":"tirada de 3 cartas",
         "precio":"$5000",
@@ -15,7 +19,7 @@
     },
     {
         "id":2,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-109004.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura del Sol",
         "descripcion":"tirada de 5 cartas",
         "precio":"$5000",
@@ -24,7 +28,7 @@
     },
     {
         "id":3,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-gratis/ilustracion-cartas-tarot-dibujadas-mano_52683-108965.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura de las Relaciones",
         "descripcion":"tirada de cartas",
         "precio":"$7500",
@@ -33,7 +37,7 @@
     },
     {
         "id":4,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-109007.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura de la Balanza",
         "descripcion":"tirada de 5 cartas",
         "precio":"$9000",
@@ -42,16 +46,16 @@
     },
     {
         "id":5,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-109001.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura del Caballo de Troya",
         "descripcion":"tirada de cartas",
-        "precio":"$60000",
+        "precio":"$6000",
         "categoria":2,
         "stock":50
     },
     {
         "id":6,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-109001.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura Evolutiva",
         "descripcion":"tirada de 5 cartas",
         "precio":"$4000",
@@ -60,7 +64,7 @@
     },
     {
         "id":7,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-gratis/ilustracion-cartas-tarot-dibujadas-mano_52683-108989.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura de la Pareja",
         "descripcion":"tirada de cartas",
         "precio":"$7000",
@@ -69,7 +73,7 @@
     },
     {
         "id":8,
-        "imagen":"https://img.freepik.com/foto-gratis/elemento-artesania-mano-papel-corazon-rojo_53876-128923.jpg",
+        "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-109010.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087",
         "nombre":"Lectura del Crush",
         "descripcion":"tirada de cartas",
         "precio":"$10000",
