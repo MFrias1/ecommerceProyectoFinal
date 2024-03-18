@@ -6,7 +6,7 @@ import categorias from "../utils/productos.json";
 import Navbar from "./Navbar";
 import { AsyncMock } from "../utils/asyncMock";
 
-const ItemListContainer = ()=>{
+const ItemListContainer = (prop)=>{
     //obtengo id 
     const {id} = useParams();
     const [response, setResponse]=useState([])
@@ -17,7 +17,7 @@ const ItemListContainer = ()=>{
         AsyncMock(categorias).then(respuesta=>{setResponse(respuesta); setCargando(false)})
     }, [])
 
-    if (cargando) return <h1>Cargando ItemListContainer...</h1>
+    if (cargando) return(console.log("Cargando ItemListContainer..."))
 
     //retorno un filtro de los productos
     const ObtenerServiciosPorCategoria = (catId)=>{
@@ -30,20 +30,21 @@ const ItemListContainer = ()=>{
 
     return(
         <>
-            <div className="categoriasTitulo">
-                <h1>Tipos de Servicios</h1>
-            </div>
             {response.categorias.map((categoria)=>{
-                 return (
-                    <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
-                            <p>{categoria.nombre}</p>
-                    </Link>
+                return (
+                    <ul className="navbarServicios">
+                            <Link key={categoria.id}  to={`/categorias/${categoria.id}`}>
+                                <li>{prop.item1}</li>
+                            </Link>
+                            <Link key={categoria.id}  to={`/categorias/${categoria.id}`}>
+                                <li>{prop.item2}</li>
+                            </Link>
+                    </ul>
                 )
             })}
-        {  
+            {  
             ProductosPorCategoria && (
                 ProductosPorCategoria.map((servicio)=>{
-                    console.log(servicio)
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
                             <div className="categoriasDespliegue_Nombre">
