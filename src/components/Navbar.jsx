@@ -14,16 +14,14 @@ const Navbar =()=>{
                 <ul className="navbarListado"> 
                         <li> <a href="#">Contacto</a></li>
                         <li> <a href="#">Sobre Nosotros</a></li>
-                        <li> <a href="#" onClick={()=>SetMostrarServicios(!MostrarServicios)}>Servicios</a>
-                            {MostrarServicios && (
-                                <ItemListContainer item1="General" item2="De Pareja"/>)
-                            }
+                        <li> 
+                            <a href="#" onClick={()=>SetMostrarServicios(!MostrarServicios)}>Servicios</a>
+                            {MostrarServicios && <ItemListContainer/>}
                         </li>
                 </ul>
             </div>
             <CartWidget/> 
         </nav>
-    </>
- );
+    </>);
 }
 export default Navbar;

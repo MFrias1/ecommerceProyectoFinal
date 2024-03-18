@@ -30,20 +30,16 @@ const ItemListContainer = (prop)=>{
 
     return(
         <>
-            {response.categorias.map((categoria)=>{
-                return (
-                    <ul className="navbarServicios">
-                            <Link key={categoria.id}  to={`/categorias/${categoria.id}`}>
-                                <li>{prop.item1}</li>
+            <ul className="navbarServicios">
+                    {response.categorias.map((categoria)=>{
+                        <li key={categoria.id}>
+                            <Link to={`/categorias/${categoria.id}`}>
+                                {categoria.nombre}
                             </Link>
-                            <Link key={categoria.id}  to={`/categorias/${categoria.id}`}>
-                                <li>{prop.item2}</li>
-                            </Link>
-                    </ul>
-                )
-            })}
-            {  
-            ProductosPorCategoria && (
+                        </li>
+                    })}
+            </ul>
+            {ProductosPorCategoria && (
                 ProductosPorCategoria.map((servicio)=>{
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
