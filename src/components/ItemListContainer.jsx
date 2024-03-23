@@ -3,8 +3,8 @@
 import { useState,useEffect } from "react";
 import {Link, useParams} from "react-router-dom";
 import categorias from "../utils/productos.json";
-import Navbar from "./Navbar";
 import { AsyncMock } from "../utils/asyncMock";
+import Categories from "../components/categories";
 
 const ItemListContainer = (prop)=>{
     //obtengo id 
@@ -32,11 +32,9 @@ const ItemListContainer = (prop)=>{
         <>
             <ul className="navbarServicios">
                     {response.categorias.map((categoria)=>{
-                        <li key={categoria.id}>
-                            <Link to={`/categorias/${categoria.id}`}>
-                                {categoria.nombre}
-                            </Link>
-                        </li>
+                        <Link to={`/categorias/${categoria.id}`}>
+                            <li>{categoria.nombre}</li>
+                        </Link>
                     })}
             </ul>
             {ProductosPorCategoria && (

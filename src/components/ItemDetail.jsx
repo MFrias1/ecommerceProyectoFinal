@@ -23,6 +23,5 @@ const ItemDetail =({item, index})=>{
         </>
         
     )
-    
 }
 export default ItemDetail;

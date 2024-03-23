@@ -13,7 +13,9 @@ body{
     padding-inline: 1rem;
     background-color: #edb6b4;
 }
-
+.color{
+    color: black;
+}
 .navbarDe li{
     margin-inline: 5px;
 }
