@@ -4,7 +4,6 @@ import { useState,useEffect } from "react";
 import {Link, useParams} from "react-router-dom";
 import categorias from "../utils/productos.json";
 import { AsyncMock } from "../utils/asyncMock";
-import Categories from "../components/categories";
 
 const ItemListContainer = (prop)=>{
     //obtengo id 
@@ -32,7 +31,7 @@ const ItemListContainer = (prop)=>{
         <>
             <ul className="navbarServicios">
                     {response.categorias.map((categoria)=>{
-                        <Link to={`/categorias/${categoria.id}`}>
+                        <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
                             <li>{categoria.nombre}</li>
                         </Link>
                     })}
@@ -41,8 +40,17 @@ const ItemListContainer = (prop)=>{
                 ProductosPorCategoria.map((servicio)=>{
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
-                            <div className="categoriasDespliegue_Nombre">
-                                <h1>{servicio.nombre}</h1>
+                            <div>
+                                <li className="listadoDeServicios">
+                                    <div>
+                                        <img src={servicio.imagen} alt={servicio.nombre}></img>
+                                    </div>
+                                    <div className="serviciosTitulo">
+                                        <p>{servicio.nombre}</p>
+                                        <p>{servicio.precio}</p>
+                                    </div>
+                                    <button> <p>Mas detalles</p></button>
+                                </li>
                             </div>
                         </Link>
                     )

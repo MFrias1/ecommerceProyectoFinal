@@ -5,7 +5,7 @@ import categoria from '../utils/productos.json';
 
 const Navbar = () => {
     const [MostrarServicios,SetMostrarServicios] = useState(false);
-
+    // Extraigo lista de categorías del JSON
     const categorias = categoria.categorias;
     return (
         <>
@@ -24,7 +24,9 @@ const Navbar = () => {
                                     <ul>
                                         {categorias.map((categoria) => 
                                         <li key={categoria.id}>
-                                            <Link to={`/categorias/${categoria.id}`}><p>{categoria.nombre}</p></Link>
+                                            <Link to={`/categorias/${categoria.id}`}>
+                                                <p>{categoria.nombre}</p>
+                                            </Link>
                                         </li>
                                         )}
                                     </ul>
