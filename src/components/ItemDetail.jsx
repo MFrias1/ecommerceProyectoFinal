@@ -10,7 +10,7 @@ const ItemDetail =({item, index})=>{
 
     return(
         <>
-            <li key={item.id} className="listadoDeServicios"> 
+            <li className="listadoDeServicios"> 
                     <div> 
                         <img src={item.imagen} alt={item.nombre}></img> 
                     </div>

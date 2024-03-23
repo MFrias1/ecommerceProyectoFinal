@@ -4,7 +4,8 @@ import { useState,useEffect } from "react";
 import "../App.css";
 import ItemDetail from "./ItemDetail";
 import { AsyncMock } from "../utils/asyncMock";
-import servicios from "../utils/productos.json"
+import servicios from "../utils/productos.json";
+import { Link } from "react-router-dom";
 
 const ItemDetailContainer= ()=>{
 
@@ -36,10 +37,12 @@ const ItemDetailContainer= ()=>{
                 </div>
                 <ul>
                     {
-                        MostrarServicios.servicios.map((item, index) =>{
+                        MostrarServicios.servicios.map(item =>{
                             return (
                             <>
-                                <ItemDetail key={item} item={item} />
+                                <Link to={`/item/${item.id}`}>
+                                    <ItemDetail key={item.id}  item={item} />
+                                </Link>
                             </>
                             )
                         })
