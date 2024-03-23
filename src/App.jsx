@@ -1,16 +1,16 @@
-import "../src/App.css"
+
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
-import categorias from './utils/productos.json';
+import "../src/App.css"
 
 function App() {
   
   return (
     <>
       <Router>
-      <Navbar categorias={categorias} />
+      <Navbar/>
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/categorias/:id' element={<ItemListContainer/>} />

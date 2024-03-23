@@ -29,7 +29,7 @@ const ItemListContainer = (prop)=>{
 
     return(
         <>
-            <ul className="navbarServicios">
+            <ul>
                     {response.categorias.map((categoria)=>{
                         <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
                             <li>{categoria.nombre}</li>
@@ -40,18 +40,20 @@ const ItemListContainer = (prop)=>{
                 ProductosPorCategoria.map((servicio)=>{
                     return (
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
-                            <div>
-                                <li className="listadoDeServicios">
-                                    <div>
-                                        <img src={servicio.imagen} alt={servicio.nombre}></img>
-                                    </div>
-                                    <div className="serviciosTitulo">
-                                        <p>{servicio.nombre}</p>
-                                        <p>{servicio.precio}</p>
-                                    </div>
-                                    <button> <p>Mas detalles</p></button>
-                                </li>
-                            </div>
+                            <section className ="servicios">
+                                <ul>
+                                    <li className="listadoDeServicios">
+                                        <div>
+                                            <img src={servicio.imagen} alt={servicio.nombre}></img>
+                                        </div>
+                                        <div className="serviciosTitulo">
+                                            <p>{servicio.nombre}</p>
+                                            <p>{servicio.precio}</p>
+                                        </div>
+                                        <button> <p>Mas detalles</p></button>
+                                    </li>
+                                </ul>
+                            </section>
                         </Link>
                     )
                     

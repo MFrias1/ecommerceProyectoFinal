@@ -1,13 +1,13 @@
 //llamo al servicio 
 
-import { useState,useEffect } from "react"
-import "../App.css"
-import servicios from "../utils/productos.json"
+import { useState,useEffect } from "react";
+import "../App.css";
 import ItemDetail from "./ItemDetail";
 import { AsyncMock } from "../utils/asyncMock";
+import servicios from "../utils/productos.json"
 
 const ItemDetailContainer= ()=>{
-    
+
     //estados
     const [cargando,setCargando] = useState(true)
     const [MostrarServicios,SetMostrarProductos] = useState([]);
@@ -36,10 +36,10 @@ const ItemDetailContainer= ()=>{
                 </div>
                 <ul>
                     {
-                        MostrarServicios.servicios.length>0 && MostrarServicios.servicios.map((item, index) =>{
+                        MostrarServicios.servicios.map((item, index) =>{
                             return (
                             <>
-                                <ItemDetail item={item} />
+                                <ItemDetail key={item} item={item} />
                             </>
                             )
                         })
