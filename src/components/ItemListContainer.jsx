@@ -39,6 +39,7 @@ const ItemListContainer = (prop)=>{
             {ProductosPorCategoria && (
                 ProductosPorCategoria.map((servicio)=>{
                     return (
+                        //redirige a ItemDetailContainer
                         <Link key={servicio.id} to={`/item/${servicio.id}`}> 
                             <section className ="servicios">
                                 <ul>

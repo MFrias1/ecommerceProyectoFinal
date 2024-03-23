@@ -5,9 +5,11 @@ import "../App.css";
 import ItemDetail from "./ItemDetail";
 import { AsyncMock } from "../utils/asyncMock";
 import servicios from "../utils/productos.json";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ItemDetailContainer= ()=>{
+    // Obtengo id del item
+    const { id } = useParams();
 
     //estados
     const [cargando,setCargando] = useState(true)
@@ -28,6 +30,12 @@ const ItemDetailContainer= ()=>{
     </>
     )
 
+    // Encontrar el servicio con el id correspondiente
+    const servicioSeleccionado = MostrarServicios.servicios.find(
+        (servicio) => servicio.id === parseInt(id)
+    );
+    
+    
    //mapeo
     return(
         <>        
@@ -37,15 +45,10 @@ const ItemDetailContainer= ()=>{
                 </div>
                 <ul>
                     {
-                        MostrarServicios.servicios.map(item =>{
-                            return (
-                            <>
-                                <Link to={`/item/${item.id}`}>
-                                    <ItemDetail key={item.id}  item={item} />
-                                </Link>
-                            </>
-                            )
-                        })
+                        servicioSeleccionado && (
+                                    <ItemDetail key={servicioSeleccionado.id} item={servicioSeleccionado}></ItemDetail>
+                        )
+                        
                     }
                 </ul>
                 
