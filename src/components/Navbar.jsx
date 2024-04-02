@@ -1,12 +1,12 @@
 import { useState } from "react";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import categoria from '../utils/productos.json';
+import categoria from '../utils/categorias.json';
 
 const Navbar = () => {
     const [MostrarServicios,SetMostrarServicios] = useState(false);
     // Extraigo lista de categorías del JSON
-    const categorias = categoria.categorias;
+    /*const categorias = categoria.categorias;*/
     return (
         <>
             <nav className="navbar">
@@ -22,7 +22,7 @@ const Navbar = () => {
                         <li><a onClick={() => SetMostrarServicios(!MostrarServicios)}>Servicios</a>
                                 {MostrarServicios && (
                                     <ul>
-                                        {categorias.map((categoria) => 
+                                        {categoria.map((categoria) => 
                                         <li key={categoria.id}>
                                             <Link to={`/categorias/${categoria.id}`}>
                                                 <p>{categoria.nombre}</p>

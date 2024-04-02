@@ -31,7 +31,7 @@ const ItemDetailContainer= ()=>{
     )
 
     // Encontrar el servicio con el id correspondiente
-    const servicioSeleccionado = MostrarServicios.servicios.find(
+    const servicioSeleccionado = MostrarServicios.find(
         (servicio) => servicio.id === parseInt(id)
     );
     

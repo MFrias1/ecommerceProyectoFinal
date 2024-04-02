@@ -1,13 +1,4 @@
-{
-    "categorias":[
-    {"id":1, 
-    "nombre":"Pareja",
-    "imagen":"https://img.freepik.com/vector-gratis/ilustracion-cartas-tarot-dibujadas-mano_52683-108989.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087"},
-    {"id":2, 
-    "nombre":"General",
-    "imagen":"https://img.freepik.com/vector-gratis/ilustracion-cartas-tarot-dibujadas-mano_52683-108989.jpg?size=626&ext=jpg&ga=GA1.1.586749289.1708747087"}
-    ],
-    "servicios":[
+[
     {
         "id":1,
         "imagen":"https://img.freepik.com/vector-premium/ilustracion-cartas-tarot-dibujadas-mano_52683-108980.jpg?w=740",
@@ -15,7 +6,8 @@
         "descripcion":"tirada de 3 cartas",
         "precio":"$5000",
         "categoria":2,
-        "stock":50
+        "stock":50,
+        "isOnDiscount":false
     },
     {
         "id":2,
@@ -80,4 +72,4 @@
         "categoria":1,
         "stock":50
     }
-]}
+]

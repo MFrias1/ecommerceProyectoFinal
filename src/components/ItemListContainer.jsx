@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import {Link, useParams} from "react-router-dom";
 import categorias from "../utils/productos.json";
 import { AsyncMock } from "../utils/asyncMock";
+import {collection, getDocs,getFirestore } from "firebase/firestore";
 
 const ItemListContainer = (prop)=>{
     //obtengo id 
@@ -15,13 +16,26 @@ const ItemListContainer = (prop)=>{
     useEffect(()=>{
         AsyncMock(categorias).then(respuesta=>{setResponse(respuesta); setCargando(false)})
     }, [])
+    
 
-    if (cargando) return(console.log("Cargando ItemListContainer..."))
+   //consulta de colección sin filtros
+    useEffect(()=>{
+        const database = getFirestore();
+
+        const serviciosRef = collection(database, 'servicios')
+        getDocs(serviciosRef).then((snapshot)=>{
+            snapshot.docs.map((item)=> console.log({ ...item.data() }))
+        })
+        
+
+    }, [])
+
+
 
     //retorno un filtro de los productos
     const ObtenerServiciosPorCategoria = (catId)=>{
         if (catId){
-            return response.servicios.filter((servicio)=> servicio.categoria === parseInt(catId))
+            return response.filter((servicio)=> servicio.categoria === parseInt(catId))
         }
     }
 
@@ -30,7 +44,7 @@ const ItemListContainer = (prop)=>{
     return(
         <>
             <ul>
-                    {response.categorias.map((categoria)=>{
+                    {categorias.map((categoria)=>{
                         <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
                             <li>{categoria.nombre}</li>
                         </Link>
