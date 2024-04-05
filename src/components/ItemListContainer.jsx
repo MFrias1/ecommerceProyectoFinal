@@ -32,6 +32,8 @@ const ItemListContainer = (prop) => {
     const ObtenerServiciosPorCategoria = (catId) => {
         if (catId) {
             return response.filter((servicio) => servicio.categoria === parseInt(catId))
+        }else {
+            return response; //Devuelve todos los servicios si no se provee un ID
         }
     }
 
@@ -47,6 +49,9 @@ const ItemListContainer = (prop) => {
                     </Link>
                 })}
             </ul>
+            <div className="tituloBanner">
+                    <h2> Nuestros Servicios </h2>
+                </div>
             <ul className="servicios">
                 {ProductosPorCategoria && (
                     ProductosPorCategoria.map((servicio) => {
