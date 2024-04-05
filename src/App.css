@@ -65,6 +65,20 @@ a{
     margin-top: 2rem;
 }
 /*servicios*/
+.servicioDetalles{
+    list-style-type:none;
+    display: flex;
+    width: 400px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.servicio__elemento{
+    border: solid rgb(245, 180, 245) 1px;
+    background-color: rgb(255, 225, 255);
+    color: black;
+}
 .servicios{
     list-style-type:none;
     margin: 0;

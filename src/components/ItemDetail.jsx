@@ -13,11 +13,11 @@ const ItemDetail = ({ item }) => {
 
     return (
         <>
-            <li className="listadoDeServicios">
-                <div>
+            <li className="servicio__elemento">
+                <div className="elementos_img">
                     <img src={item.imagen} alt={item.nombre}></img>
                 </div>
-                <div className="servicios_informacion">
+                <div className="elementos_informacion">
                     <p>{item.nombre}</p>
                     <p>{item.precio}</p>
                 </div>

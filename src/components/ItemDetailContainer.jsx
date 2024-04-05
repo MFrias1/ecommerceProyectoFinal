@@ -38,15 +38,13 @@ const ItemDetailContainer = () => {
     //mapeo
     return (
         <>
-            <section className="">
-                <ul>
+                <ul className="servicioDetalles">
                     {
                         servicioSeleccionado && (
                             <ItemDetail key={servicioSeleccionado.id} item={servicioSeleccionado}></ItemDetail>
                         )
                     }
                 </ul>
-            </section>
         </>
     )
 }
