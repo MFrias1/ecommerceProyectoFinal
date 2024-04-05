@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ItemCount = ({ stock, initial, onAdd })=>{
+const ItemCount = ({ stock, initial,  onAdd  })=>{
   //estado contador
     const [contador, setContador] = useState(initial)
 
@@ -9,13 +9,9 @@ const ItemCount = ({ stock, initial, onAdd })=>{
         if (newCount >= 0 && newCount <= stock) {
             setContador(newCount)
         }
-    }
-
-    const handleAdd = () => {
-        if (contador > 0) {
-          onAdd(contador)
+        if(value >= 1){
+          onAdd(1)
         }
-    
     }
 
     return (
@@ -23,12 +19,18 @@ const ItemCount = ({ stock, initial, onAdd })=>{
         <button onClick={() => handleCountChange(-1)}>
           -
         </button>
-        <button onClick={() => handleCountChange(+1)}>
+        <input
+        type="text"
+        value={contador}
+        readOnly
+        className="w-10 text-center bg-gray-100"
+        />
+        <button onClick={() => handleCountChange(1)}>
           +
         </button>
-        <button onClick={() => handleAdd()}>
+        {<button onClick={() =>  onAdd()}>
           Agregar al carrito
-        </button>
+          </button>}
     </div>);
     
 

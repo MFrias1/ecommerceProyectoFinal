@@ -2,144 +2,107 @@
 body{
     margin: 0;
     padding: 0%;
-    color: white;
     background-color: #e2d7d5;
-    
+    color: white;
 }
+/*Navbar*/
 .navbar{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-inline: 1rem;
-    background-color: #edb6b4;
-}
-.color{
-    color: black;
-}
-.navbarDe li{
-    margin-inline: 5px;
+    background-color: #d68b89;
 }
 a{
     text-decoration: none;
-    color:white
+    color: white;
+    cursor: pointer;
 }
-ul.navbarListado{
+.navbarListado{
     display: flex;
     list-style: none;
-    display: flex; 
-    padding: 0;
+}
+.navbarListado li{
+    margin-inline:15px;
+    position: relative;
 }
 .navbarServicios{
     position: absolute;
     margin: 0;
     padding: 0%;
+    background-color:#d68b89;
+    border-radius: 5px;
+    color: #c07673;
+    box-shadow:0px 0px 2px 2px #c07673;
 }
-.navbarServicios li{
+.navbarServicios__opciones{
     list-style: none;
 }
-
+.navbarServicios__opciones p{
+    margin: 5px;
+}
 .carrito{
     width: 20%;
     height: 10%;
 }
-
+.navbarLogo{
+    height: 90px;
+    width: 100px;
+}
 .navbarLogo img{
-    width: 150px;
-    height: 150px;
-    margin: 0%;
+    width: 100%;
+    height: 100%;
 }
 .items{
     color: black;
 }
-.bannerPrincipal{
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.bannerPrincipal div{
-    width: calc(100%/3);
-}
-.bannerPrincipal div img{
-    width: 100%;
-    height: 100%;
-}
-.tituloServicios{
+/*fin del navbar*/
+
+.tituloBanner{
     color: black;
     text-align: left;
     margin-left: 32px;
     margin-top: 2rem;
 }
-.tituloServicios h3{
-    font-size: 16px;
-}
+/*servicios*/
 .servicios{
-    align-items: center;
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: grid;
     text-align: center;
-    justify-content: center;
+    grid-template-columns: repeat(3,418px);
     width: 100%;
     height: 100%;
-    color: black;
+    justify-content: center;
 }
-.servicios ul{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    list-style-type: none;
-}
-.servicios ul li{
-    width: 302px;
-    height: 407px;
-    margin-inline: 2px;
-    margin-top: 3px;
+.servicios__elementos{
     border: solid rgb(245, 180, 245) 1px;
     background-color: rgb(255, 225, 255);
+    color: black;
+    margin-inline: 1px;
+    margin-bottom: 10px;
 }
-.serviciosTitulo{
+.elementos_button{
+    border-radius: 3px;
+    box-shadow: none;
+    border-color:#edb6b4;
+    background-color: #edb6b4;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.elementos_informacion{
     align-items: center;
     justify-content: center;
     margin:auto;
-    height: 15%;
-    width: 95%;
     font-size: 15px;
-    background-color: none;
 }
-.serviciosTitulo p{
+.elementos_informacion p{
     text-align: left;
-    margin: 0%;
+    margin-inline: 5px;
+    margin-bottom: 0;
 }
-.listadoDeServicios img{
+.elementos_img img{
     width: 100%;
     height: 65%;
 }
-/*.categorias{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 470px;
-    color: #edb6b4;
-}
-.categoriasTitulo{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.categoriasDespliegue{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-}
-.categoriasDespliegue_Nombre{
-    align-items: center;
-    justify-content: center;
-    margin-inline: 5px;
-    height: 200px;
-    width: 100px;
-    background-color:#edb6b4;
-    border: solid 2px #c99694;
-}*/
