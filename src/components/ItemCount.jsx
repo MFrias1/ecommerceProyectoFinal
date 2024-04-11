@@ -1,6 +1,7 @@
+import { validatePassword } from "firebase/auth";
 import { useState } from "react";
 
-const ItemCount = ({ stock, initial,  onAdd  })=>{
+const ItemCount = ({ stock, initial,  onAdd , onRemove })=>{
   //estado contador
     const [contador, setContador] = useState(initial)
 
@@ -11,6 +12,9 @@ const ItemCount = ({ stock, initial,  onAdd  })=>{
         }
         if(value >= 1){
           onAdd(1)
+        }
+        if(value === -1){
+          onRemove(1)
         }
     }
 

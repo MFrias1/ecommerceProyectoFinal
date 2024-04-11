@@ -1,5 +1,7 @@
-import carrito from '../assets/carrito.png'
-import "../App.css"
+import carrito from '../assets/carrito.png';
+import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import {CartContext} from '../context/cartContext';
 import { useState } from 'react'
 
 const CartWidget=()=>{
@@ -13,8 +15,10 @@ const CartWidget=()=>{
     return(
         <>
             <div className="carrito">
-                <img src={carrito} alt="carrito de compras"className='carrito'/>
-                <span>(5)</span>
+                <Link to={`/cart`} className="navbarLink">
+                    <img src={carrito} alt="carrito de compras" />
+                    <span>(5)</span>
+                </Link>
             </div>
         </>
     );

@@ -2,62 +2,73 @@
 
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import categorias from "../utils/productos.json";
 import { AsyncMock } from "../utils/asyncMock";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const ItemListContainer = (prop) => {
     //obtengo id 
     const { id } = useParams();
     const [response, setResponse] = useState([])
     const [cargando, setCargando] = useState(true)
-
-    //llamo a fake API
+    const [responseProducto, setResponseProducto] = useState([])
+    
+    //consulta de colección de categorias en firestore
     useEffect(() => {
-        AsyncMock(categorias).then(respuesta => { setResponse(respuesta); setCargando(false) })
-    }, [])
-
-
-    //consulta de colección sin filtros
-    useEffect(() => {
+        setCargando(false);
         const database = getFirestore();
-
-        const serviciosRef = collection(database, 'servicios')
+        const serviciosRef = collection(database, 'categorias')
         getDocs(serviciosRef).then((snapshot) => {
-            snapshot.docs.map((item) => console.log({ ...item.data() }))
+            if (snapshot.size === 0){
+                console.log('no result')
+            }
+            setResponse(snapshot.docs.map((item) => ({ id: item.id, ...item.data() })))
+            setCargando(false);
         })
     }, [])
 
-    //retorno un filtro de los productos
-    const ObtenerServiciosPorCategoria = (catId) => {
-        if (catId) {
-            return response.filter((servicio) => servicio.categoria === parseInt(catId))
-        }else {
-            return response; //Devuelve todos los servicios si no se provee un ID
+    //consulta de colección los servicios por categorias con filtro por id en firestore
+    useEffect(()=>{
+        const database = getFirestore();
+        if(id){
+            const serviceByCat = query(collection(database, 'servicios'), where('categoria', "==", parseInt(id)))
+            getDocs(serviceByCat).then((snapshot)=>{
+                if (snapshot.size === 0){
+                    console.log('no hay categorias')
+                }
+                setResponseProducto(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})))
+            });
+        }else { // Si no se proporciona un ID, obtener todos los servicios
+            const allServices = collection(database, 'servicios');
+            getDocs(allServices).then((snapshot) => {
+                if (snapshot.size === 0) {
+                    console.log('no hay servicios');
+                }
+                setResponseProducto(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+            });
         }
-    }
+    }, [id])
 
-    const ProductosPorCategoria = ObtenerServiciosPorCategoria(id)
+    if (cargando) return <h1>Cargando.....</h1>;
 
     return (
         <>
             <ul>
                 {/* link a categorias de servicios en navbar */}
-                {categorias.map((categoria) => {
+                {response.map((categoria) => (
                     <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
                         <li>{categoria.nombre}</li>
                     </Link>
-                })}
+                ))}
             </ul>
             <div className="tituloBanner">
                     <h2> Nuestros Servicios </h2>
                 </div>
             <ul className="servicios">
-                {ProductosPorCategoria && (
-                    ProductosPorCategoria.map((servicio) => {
+                {responseProducto && (
+                    responseProducto.map((servicio) => {
                         return (
                             //redirige a ItemDetailContainer
-                            <li className="servicios__elementos">
+                            <li key={servicio.id} className="servicios__elementos">
                                 <div className="elementos_img">
                                     <img src={servicio.imagen} alt={servicio.nombre}></img>
                                 </div>
@@ -65,7 +76,7 @@ const ItemListContainer = (prop) => {
                                     <p>{servicio.nombre}</p>
                                     <p>{servicio.precio}</p>
                                 </div>
-                                <Link key={servicio.id} to={`/item/${servicio.id}`}>
+                                <Link to={`/item/${servicio.id}`}>
                                     <button className="elementos_button"> <p>Mas detalles</p></button>
                                 </Link>
                             </li>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import categoria from '../utils/categorias.json';
 
 const Navbar = () => {
     const [MostrarServicios, SetMostrarServicios] = useState(false);
@@ -21,15 +20,10 @@ const Navbar = () => {
                         <li><a >Contacto</a></li>
                         <li><a onClick={() => SetMostrarServicios(!MostrarServicios)}>Servicios</a>
                             {MostrarServicios && (
-                                <ul className="navbarServicios">
-                                    {categoria.map((categoria) =>
-                                        <li key={categoria.id} className="navbarServicios__opciones">
-                                            <Link to={`/categorias/${categoria.id}`}>
-                                                <p>{categoria.nombre}</p>
-                                            </Link>
-                                        </li>
-                                    )}
-                                </ul>
+                                <div className="navbarServicios">
+                                    <Link to={`/categoria/1`}>Pareja</Link>
+                                    <Link to={`/categoria/2`}>General</Link>
+                                </div>
                             )}
                         </li>
                     </ul>

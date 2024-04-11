@@ -1,11 +1,10 @@
 //llamo al servicio 
 
 import { useState, useEffect } from "react";
-import "../App.css";
 import ItemDetail from "./ItemDetail";
 import { AsyncMock } from "../utils/asyncMock";
 import servicios from "../utils/productos.json";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     // Obtengo id del item
@@ -40,9 +39,7 @@ const ItemDetailContainer = () => {
         <>
                 <ul className="servicioDetalles">
                     {
-                        servicioSeleccionado && (
-                            <ItemDetail key={servicioSeleccionado.id} item={servicioSeleccionado}></ItemDetail>
-                        )
+                        servicioSeleccionado && <ItemDetail key={servicioSeleccionado.id} item={servicioSeleccionado}></ItemDetail>
                     }
                 </ul>
         </>
