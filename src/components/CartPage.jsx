@@ -7,20 +7,21 @@ const CartPage = () => {
     return (
         <>
             <div>
-                {cart.map((servicio, index) => {
-                    return (
-
-                        <ul key={index}>
-                            <li>
-                                <span>
-                                    <img src={servicio.imagen} alt={servicio.nombre} /> {servicio.nombre}
-                                </span>
-                                <span>{servicio.quantity}</span>
-                            </li>
-                        </ul>
-                    )
-                })}
-
+                <ul className='cartPage'>
+                    {cart.map((servicio) => {
+                        return (
+                                <li className='cart_Service'>
+                                    <div className='service_img'>
+                                        <img src={servicio.item.imagen} alt={servicio.nombre} /> {servicio.item.nombre}
+                                    </div >
+                                    <p> {servicio.item.precio} </p>
+                                    <div className='service_cantidad'>
+                                        {servicio.quantity}
+                                    </div>
+                                </li>
+                        )
+                    })}
+                </ul>
             </div>
         </>
     )
