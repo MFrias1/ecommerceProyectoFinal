@@ -1,8 +1,19 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/cartContext'
+import Form from './form';
+import { addDoc, getFirestore } from 'firebase/firestore';
+
 /*Visualización del carrito de compras*/
 const CartPage = () => {
-    const { cart } = useContext(CartContext)
+    const { cart } = useContext(CartContext);
+
+    const handleSubmit = (e)=>{
+        e.preventDefault(); /*evitar comportamiento por defecto del form */
+
+        const database = getFirestore();
+
+        const addForm= addDoc() /*minuto 52:37 */
+    }
 
     return (
         <>
@@ -19,8 +30,10 @@ const CartPage = () => {
                                         {servicio.quantity}
                                     </div>
                                 </li>
+                               
                         )
                     })}
+                    <Form handleSubmit={handleSubmit}/>
                 </ul>
             </div>
         </>

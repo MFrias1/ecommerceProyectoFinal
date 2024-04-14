@@ -1,9 +1,9 @@
-const Form=()=>{
+const Form=({handleSubmit})=>{
 
     return(
         <>
         <div>
-            <form action="" method="get">
+            <form onSubmit={(e)=>handleSubmit(e)} method="get">
                 <input type="text" />
                 <button type="submit">Comprar</button>
             </form>
