@@ -4,7 +4,7 @@ import { useContext } from "react";
 /*Mas detalles del servicio seleccionado*/
 
 const ItemDetail = ({ item }) => {
-    const { addItem,cart, setCart, removeItem } = useContext(CartContext)
+    const { addItem,cart, removeItem } = useContext(CartContext)
 
     const onAdd = (quantity) => {
         addItem(item, quantity)
@@ -14,6 +14,7 @@ const ItemDetail = ({ item }) => {
         removeItem(item.id, quantity)
         console.log('eliminado del carrito')
     }
+    console.log(cart)
 
     return (
         <>

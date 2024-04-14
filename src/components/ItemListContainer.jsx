@@ -1,18 +1,15 @@
 //categorias de los servicios 
-
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { AsyncMock } from "../utils/asyncMock";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const ItemListContainer = (prop) => {
     //obtengo id 
     const { id } = useParams();
-    const [response, setResponse] = useState([])
     const [cargando, setCargando] = useState(true)
     const [responseProducto, setResponseProducto] = useState([])
     
-    //consulta de colección de categorias en firestore
+    //consulta a base de datos de categorias en firestore
     useEffect(() => {
         setCargando(false);
         const database = getFirestore();
@@ -21,17 +18,17 @@ const ItemListContainer = (prop) => {
             if (snapshot.size === 0){
                 console.log('no result')
             }
-            setResponse(snapshot.docs.map((item) => ({ id: item.id, ...item.data() })))
+            setResponseProducto(snapshot.docs.map((item) => ({ id: item.id, ...item.data() })))
             setCargando(false);
         })
     }, [])
 
-    //consulta de colección los servicios por categorias con filtro por id en firestore
+    //consulta de los servicios por categorias con filtro por id en firestore
     useEffect(()=>{
         const database = getFirestore();
         if(id){
-            const serviceByCat = query(collection(database, 'servicios'), where('categoria', "==", parseInt(id)))
-            getDocs(serviceByCat).then((snapshot)=>{
+            const getServiceByCat = query(collection(database, 'servicios'), where('categoria', "==", parseInt(id)))
+            getDocs(getServiceByCat).then((snapshot)=>{
                 if (snapshot.size === 0){
                     console.log('no hay categorias')
                 }
@@ -52,14 +49,6 @@ const ItemListContainer = (prop) => {
 
     return (
         <>
-            <ul>
-                {/* link a categorias de servicios en navbar */}
-                {response.map((categoria) => (
-                    <Link key={categoria.id} to={`/categorias/${categoria.id}`}>
-                        <li>{categoria.nombre}</li>
-                    </Link>
-                ))}
-            </ul>
             <div className="tituloBanner">
                     <h2> Nuestros Servicios </h2>
                 </div>

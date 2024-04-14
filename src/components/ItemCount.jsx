@@ -1,4 +1,3 @@
-import { validatePassword } from "firebase/auth";
 import { useState } from "react";
 
 const ItemCount = ({ stock, initial,  onAdd , onRemove })=>{
