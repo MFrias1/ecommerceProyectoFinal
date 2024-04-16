@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({children})=>{
-    /*seteo mi valor en el carrito */
+    /*seteo mi valor inicial en el carrito como un arreglo vacio*/
     const [cart, setCart] =useState([])
 
     /*agrego al carrito el servicio seleccionado*/

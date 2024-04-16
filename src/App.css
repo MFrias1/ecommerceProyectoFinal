@@ -135,7 +135,7 @@ a{
 }
 .elementos_img img{
     width: 100%;
-    height: 65%;
+    height: 60%;
 }
 /*Contenido del carrito*/
 .cartPage{
@@ -165,4 +165,34 @@ a{
     text-align: center;
     padding: 0;
     margin: 0;
+}
+/*CheckOut*/
+
+.datosServicosCheckOut{
+    overflow: auto; /* O puedes usar 'scroll' */
+}
+.datosServicosCheckOut_form, .datosServicosCheckOut{
+    background-color: #c07673;
+    padding: 2rem;
+    height: 343px;
+    align-items: center;
+    justify-content: center;
+}
+.inputForm{
+    width: 90%;
+}
+.serviciosCheckOut_item{
+    text-align: center;
+}
+.CheckOut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+.CheckOut div{
+    margin-inline: 1rem;
+}
+.formCheckOut div{
+    margin-bottom: 10px;
 }

@@ -3,24 +3,19 @@ import carrito from '../assets/carrito.png';
 import { Link } from "react-router-dom";
 import { CartContext } from '../context/cartContext';
 
+/* Carrito de Compras en Navbar */
 const CartWidget=()=>{
-    const{cart}=useContext(CartContext);
-    const TotalServicios= cart.reduce((acumulador, item)=>
+    const{cart}=useContext(CartContext); //Accedo al contexto del carrito
+    const TotalServicios= cart.reduce((acumulador, item)=> //Calculo el total de los servicios en el carrito
        acumulador + item.quantity, 0
     )
-    
-   /* const [contador, setContador] = useState(0);
-
-    const incrementarContador = () => {
-       setContador(contador => contador + 1);
-    };*/
-        
+     
     return(
         <>
             <div className="carrito">
-                <Link to={`/cart`} className="navbarLink">
+                <Link to={`/cart`} className="navbarLink"> {/*Link redirige a la página a CartPage cuando se hace clic en la img del carrito.*/}
                     <img src={carrito} alt="carrito de compras" />
-                    <span>{TotalServicios}</span>
+                    <span>{TotalServicios}</span> {/* coloco en la img del carrito (en el navbar) solo el total de la cantidad de servicios a comprar */}
                 </Link>
             </div>
         </>

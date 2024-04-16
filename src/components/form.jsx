@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Form=({handleSubmit})=>{
 
     return(
         <>
         <div>
             <form onSubmit={(e)=>handleSubmit(e)} method="get">
-                <input type="text" />
-                <button type="submit">Comprar</button>
+                <Link to={'/checkout'}><button type="submit">Comprar</button></Link>
             </form>
         </div>
         </>
