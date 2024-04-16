@@ -1,6 +1,7 @@
 import { update } from "firebase/database";
 import { createContext, useState } from "react";
 
+//creo contexto del Carrito
 export const CartContext = createContext();
 
 export const CartProvider = ({children})=>{
